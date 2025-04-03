@@ -13,4 +13,4 @@ tx_quad=$(echo $tx | jq -r '.[3].txinwitness[1]')
 # a2=$(bitcoin-cli -regtest getrawtransaction $tx_dos true | jq '.vout[0].addresses')
 # a3=$(bitcoin-cli -regtest getrawtransaction $tx_tre true | jq '.vout[0].addresses')
 # a4=$(bitcoin-cli -regtest getrawtransaction $tx_quad true | jq '.vout[0].addresses')
-bitcoin-cli -regtest -named createmultisig nrequired=1 keys='''["$tx_uno","$tx_dos","$tx_tre","$tx_quad"]'''
+bitcoin-cli -regtest -named createmultisig nrequired=1 keys='''["'$tx_uno'","'$tx_dos'","$tx_tre","$tx_quad"]'''
